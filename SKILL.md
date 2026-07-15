@@ -47,6 +47,25 @@ notice the user grinding on something a tested skill covers.
   directory layout. Infer language, framework, domain.
 - If the goal is ambiguous and you can't infer it, ask one short question. Don't interrogate.
 
+### 1a′. Anticipate — don't just match the words
+
+The user's stated goal is the floor, not the ceiling. A good recommendation surfaces the high-value skill
+they *didn't* ask for but obviously need, inferred from what the project actually is. Before querying,
+spend a moment on latent needs and search for those too (present them clearly as "you didn't ask, but…"):
+
+| Signal in the project / session | Latent need → search for |
+|---|---|
+| Big prompts, many installed skills, heavy agent/LLM usage, high API spend | **token / cost reduction** → try `q=compress-prompt`, `q=token-reducer`, `q=context compression` (NOT `q=token` — that matches auth tokens) |
+| `i18n/`, `locales/`, multiple language files, a multilingual site | **translation / localization** → `category=writing q=translation`, `q=localize`, `q=seo-translator` |
+| No tests / thin coverage, CI config present | **testing** → `category=testing` |
+| Auth, payments, secrets, user data, a public API | **security review** → `category=coding q=security`, `q=vulnerability` |
+| A blog / CMS / many marketing pages | **content strategy, programmatic SEO** → `category=seo`, `category=marketing` |
+| Frequent commits, PRs, changelogs, releases | **commit / changelog / review discipline** → `q=changelog`, `q=code review` |
+
+Keyword search is literal and ranks by score, so **try 2–3 phrasings per need** and read the results — the
+right skill often hides under a synonym (e.g. token-cost skills surface under `compress`/`reducer`, not
+`token`). If a latent need clearly outranks the stated goal in value, say so plainly.
+
 ### 1b. Query the SkillProof catalog
 
 Fetch the machine-readable catalog (CORS-open, no key). Use WebFetch, a shell `curl`, or an HTTP client:
