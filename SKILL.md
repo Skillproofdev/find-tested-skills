@@ -1,5 +1,6 @@
 ---
 name: find-tested-skills
+argument-hint: "[goal or task — e.g. 'improve SEO', 'write SQL', or blank to scan the project]"
 description: >-
   Finds, installs, and puts to work Claude Code skills that have actually been tested and scored, matched
   to the user's goal and project. Use whenever the user asks which skills to install, what skills would

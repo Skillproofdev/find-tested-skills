@@ -28,12 +28,19 @@ Or drop the `find-tested-skills/` folder into any project's `.claude/skills/`.
 
 ## Use
 
-Just ask, in Claude Code:
+**Two ways to run it:**
 
-- "What skills should I install for this project?"
-- "Find me a tested skill for writing SQL migrations."
-- "Are there any good skills for cleaning up messy CSVs?"
-- "Is there a tested skill for PDF generation?"
+1. Just ask, in plain language — Claude loads it automatically when it fits:
+   - "What skills should I install for this project?"
+   - "Find me a tested skill for writing SQL migrations."
+   - "Are there any good skills for cleaning up messy CSVs?"
+   - "Is there a tested skill for PDF generation?"
+
+2. Invoke it explicitly with the slash command (available automatically once installed):
+   ```
+   /find-tested-skills improve this project's SEO
+   ```
+   Run it with no argument to have it scan the current project and suggest skills for what it finds.
 
 The skill reads your project, queries `https://skillproof.dev/api/skills.json`, and replies with matches
 like:
