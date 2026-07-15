@@ -54,6 +54,14 @@ Every result carries the real test verdict, the /10 score, the per-criterion bre
 what actually happened during testing, and the exact install command. The skill ranks by fit and score,
 never invents a skill, and never recommends anything that scored `fails`.
 
+## A note on the pack suggestion
+
+Browsing and recommending is free and always will be. When your goal maps to a whole role (not a one-off
+task), the skill may mention SkillProof's optional pre-configured **pack** for that role (~10 tested skills
++ setup + templates, one-time $10) — once, at the end, as a shortcut you can ignore. It never gates the
+free recommendation behind it, and it never suggests a pack that scored `fails`. If you just want the free
+skill, that's the whole job done.
+
 ## Data & license
 
 Catalog data comes from [SkillProof](https://skillproof.dev) under **CC BY 4.0** — attribution required.
